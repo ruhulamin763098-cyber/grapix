@@ -25,6 +25,12 @@ export const GalleryStreamView: React.FC<GalleryStreamViewProps> = ({ works, onS
               <img
                 src={work.image}
                 alt={work.title}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (work.fallbackImage && target.src !== window.location.origin + work.fallbackImage) {
+                    target.src = work.fallbackImage;
+                  }
+                }}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700 ease-out"
               />

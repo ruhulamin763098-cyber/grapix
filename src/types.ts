@@ -27,6 +27,7 @@ export interface WorkItem {
   client: string;
   role: string;
   image: string;
+  fallbackImage?: string;
   aspectRatio: '16:9' | '4:3' | '3:4' | '1:1';
   summary: string;
   story: string;

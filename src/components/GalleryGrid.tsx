@@ -46,7 +46,14 @@ export const GalleryGrid: React.FC<GalleryGridProps> = ({ works, onSelectWork })
                 <img
                   src={work.image}
                   alt={work.title}
-                  onError={() => handleImageError(work.id)}
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (work.fallbackImage && target.src !== window.location.origin + work.fallbackImage) {
+                      target.src = work.fallbackImage;
+                    } else {
+                      handleImageError(work.id);
+                    }
+                  }}
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-104"
                 />

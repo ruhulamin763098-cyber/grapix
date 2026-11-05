@@ -1,4 +1,10 @@
 import { WorkItem, Exhibition, Testimonial } from '../types';
+import heroCoverImg from '../assets/images/hero_editorial_cover_1793883889865.jpg';
+import photoArchImg from '../assets/images/photo_architecture_minimal_1793883889924.jpg';
+import brandPackagingImg from '../assets/images/design_brand_packaging_1793883892847.jpg';
+import photoPortraitImg from '../assets/images/photo_portrait_chiaroscuro_1793883892289.jpg';
+import photoStreetImg from '../assets/images/photo_street_cinematic_1793883893559.jpg';
+import designMonographImg from '../assets/images/design_editorial_monograph_1793883893299.jpg';
 
 export const PORTFOLIO_WORKS: WorkItem[] = [
   {
@@ -10,7 +16,8 @@ export const PORTFOLIO_WORKS: WorkItem[] = [
     year: '2026',
     client: 'Maison Vaneau & Atelier Noir',
     role: 'Lead Photographer & Creative Director',
-    image: '/src/assets/images/hero_editorial_cover_1793883889865.jpg',
+    image: heroCoverImg,
+    fallbackImage: '/images/hero_editorial_cover_1793883889865.jpg',
     aspectRatio: '16:9',
     featured: true,
     awardOrPress: 'Vogue Scandinavia Feature · Cover of The Editorial Eye Issue 44',
@@ -42,7 +49,8 @@ export const PORTFOLIO_WORKS: WorkItem[] = [
     year: '2025',
     client: 'Studio ArchiForm & Phoenix Modern',
     role: 'Architectural Photographer',
-    image: '/src/assets/images/photo_architecture_minimal_1793883889924.jpg',
+    image: photoArchImg,
+    fallbackImage: '/images/photo_architecture_minimal_1793883889924.jpg',
     aspectRatio: '4:3',
     featured: true,
     awardOrPress: 'Architectural Photography Award Gold 2025',
@@ -74,7 +82,8 @@ export const PORTFOLIO_WORKS: WorkItem[] = [
     year: '2026',
     client: 'Aura Botanica Skincare Lab',
     role: 'Graphic Designer & Visual Identity Lead',
-    image: '/src/assets/images/design_brand_packaging_1793883892847.jpg',
+    image: brandPackagingImg,
+    fallbackImage: '/images/design_brand_packaging_1793883892847.jpg',
     aspectRatio: '4:3',
     featured: true,
     awardOrPress: 'Red Dot Design Award: Best of the Best 2026',
@@ -104,7 +113,8 @@ export const PORTFOLIO_WORKS: WorkItem[] = [
     year: '2025',
     client: 'Revue des Arts Contemporains',
     role: 'Editorial Portraitist',
-    image: '/src/assets/images/photo_portrait_chiaroscuro_1793883892289.jpg',
+    image: photoPortraitImg,
+    fallbackImage: '/images/photo_portrait_chiaroscuro_1793883892289.jpg',
     aspectRatio: '3:4',
     featured: true,
     awardOrPress: 'Taylor Wessing Photographic Portrait Prize Finalist',
@@ -136,7 +146,8 @@ export const PORTFOLIO_WORKS: WorkItem[] = [
     year: '2025',
     client: 'Monograph: Nocturnal Geography',
     role: 'Street Photographer',
-    image: '/src/assets/images/photo_street_cinematic_1793883893559.jpg',
+    image: photoStreetImg,
+    fallbackImage: '/images/photo_street_cinematic_1793883893559.jpg',
     aspectRatio: '4:3',
     featured: false,
     awardOrPress: 'LensCulture Street Photography Awards Winner',
@@ -168,7 +179,8 @@ export const PORTFOLIO_WORKS: WorkItem[] = [
     year: '2026',
     client: 'Zurich Design Museum & Niggli Verlag',
     role: 'Editorial Book Designer & Art Director',
-    image: '/src/assets/images/design_editorial_monograph_1793883893299.jpg',
+    image: designMonographImg,
+    fallbackImage: '/images/design_editorial_monograph_1793883893299.jpg',
     aspectRatio: '3:4',
     featured: false,
     awardOrPress: 'Swiss Design Awards Shortlist · 100 Best Posters & Books DACH',

@@ -43,6 +43,12 @@ export const GalleryCatalogView: React.FC<GalleryCatalogViewProps> = ({ works, o
                     <img
                       src={work.image}
                       alt=""
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (work.fallbackImage && target.src !== window.location.origin + work.fallbackImage) {
+                          target.src = work.fallbackImage;
+                        }
+                      }}
                       className="w-7 h-7 rounded-md object-cover border border-zinc-200 dark:border-zinc-700"
                     />
                     <span>{work.title}</span>

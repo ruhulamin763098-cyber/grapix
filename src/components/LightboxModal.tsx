@@ -149,6 +149,12 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
             <img
               src={work.image}
               alt={work.title}
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (work.fallbackImage && target.src !== window.location.origin + work.fallbackImage) {
+                  target.src = work.fallbackImage;
+                }
+              }}
               referrerPolicy="no-referrer"
               className={`max-w-full max-h-full object-contain rounded-lg shadow-2xl transition-all duration-300 ${
                 isZoomed ? 'scale-150 transform-origin-center' : 'scale-100'

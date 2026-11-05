@@ -83,6 +83,12 @@ export const Hero: React.FC<HeroProps> = ({ featuredWork, onSelectWork, onOpenIn
               <img
                 src={featuredWork.image}
                 alt={featuredWork.title}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (featuredWork.fallbackImage && target.src !== window.location.origin + featuredWork.fallbackImage) {
+                    target.src = featuredWork.fallbackImage;
+                  }
+                }}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700 ease-out"
               />
